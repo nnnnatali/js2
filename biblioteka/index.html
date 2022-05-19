@@ -10,18 +10,25 @@
 	<section class="section">
 		<div class="menu">
 			<table>
-				<tr><td>Мои любимые книги</td></tr>
-				<tr><td>лайки</td></tr>
-				<tr><td>Список книг</td></tr>
-				<tr><td>список</td></tr>
-				<tr><td>Добавить книгу</td></tr>
-				<tr><td>форма</td></tr>
+				<tr><td id="myLike">Мои любимые книги</td></tr>
+				<tr><td id="like">лайки</td></tr>
+				<tr><td id="listBook">Список книг</td></tr>
+				<tr><td id="list">список</td></tr>
+				<tr><td id="addBook">Добавить книгу</td></tr>
+				<tr><td id="formBook">
+					<form>
+						<input type="radio" name="newBook" value="write">Написать самому<br>
+						<input type="radio" name="newBook" value="dwlnd">Загрузить из файла
+					</form>
+				</td></tr>
 
 
 			</table>
 		</div>
 		<div class="content">
-			<tr><td>Открытая книга для чтения</td></tr>
+			<table>
+			<tr><td id="openBook">Открытая книга для чтения</td></tr>
+			</table>
 		</div>
 	</section>
 </body>

@@ -17,3 +17,26 @@ h1
 	flex-direction: row;
 	justify-content: center;
 }
+
+.menu
+{
+	min-width: 200px;
+	border-right: 1px solid black;
+}
+
+td
+{
+	width: 100%;
+	padding: 3px;
+	margin: 2px;
+}
+
+#myLike, #listBook, #addBook, #openBook
+{
+	background-color: #ada7a1;
+}
+
+#like, #list, #formBook
+{
+	background-color: #e0ddd7;
+}
