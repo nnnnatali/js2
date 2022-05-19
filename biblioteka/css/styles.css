@@ -1,0 +1,19 @@
+*
+{
+	margin: 0px;
+	padding: 0px;
+	font-family: "Century Gothic";
+}
+h1
+{
+	text-align: center;
+}
+
+.section
+{
+	margin-top: 10px;
+	min-width: 300px;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+}
