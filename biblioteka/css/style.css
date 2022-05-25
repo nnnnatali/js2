@@ -1,0 +1,40 @@
+*
+{
+	margin: 0px;
+	padding: 0px;
+	font-family: "Century Gothic";
+}
+h1
+{
+	text-align: center;
+}
+
+.section
+{
+	margin-top: 10px;
+	min-width: 300px;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+}
+
+.oneBlock
+{
+	min-width: 150px;
+	border-right: 1px solid black;
+	margin-right: 10px;
+}
+
+.myLike, .listBook, .addBook, p
+{
+	background-color: #ada7a1;
+	margin-bottom: 5px;
+	border-radius: 3px;
+}
+
+.like, .list, .new
+{
+	background-color: #e0ddd7;
+	margin-bottom: 5px;
+	border-radius: 3px;
+}
