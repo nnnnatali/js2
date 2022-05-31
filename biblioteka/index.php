@@ -16,11 +16,11 @@
     <section class="section">
     <div class="oneBlock">
       <div class="myLike">Мои любимые книги</div>
-      <div class="like">
+      <div class="container">
 
       </div>
       <div class="listBook">Список книг</div>
-      <div class="list">
+      <div class="container">
         <?php
         require "php/db.php";
         $rt = "SELECT * FROM `books`";
@@ -38,15 +38,16 @@
   				<label for="tab-btn-1">Написать самому</label><br>
   				<input type="radio" name="tab-btn" id="tab-btn-2" value="">
   				<label for="tab-btn-2">Загрузить из файла</label>
-  				<div id="content-1">Новая книга
+  				<div id="content-1"><b>Новая книга</b>
   				<form method="POST"> 
 				<p>Название</p>
-				<input type="text" name="first" class="name_1"><br>
+				<input type="text" name="first" class="name"><br>
 				<p>Автор</p>
-				<input type="text" name="first" class="name_2"><br>
+				<input type="text" name="first" class="avtor"><br>
 				<p>Содержимое</p>
-				<textarea class="name_3" cols="36" rows="23" placeholder="Напишите вашу книгу" name="second" style="width: 170px; height: auto;"></textarea><br>
-				<button type="button" class="random" onclick="reload_interval(2000);"><span>Загрузить</span></button>
+				<textarea class="text-Book" cols="36" rows="23" placeholder="Напишите вашу книгу" name="second" style="width: 170px; height: auto;"></textarea><br>
+				<button type="button" class="class" onclick="reload_interval(2000);"><span>Загрузить</span></button>
+      </form>
   				</div>
   				<div id="content-2"><h3>Название</h3>
   				<form method="POST" enctype="multipart/form-data" id="23"> 
@@ -59,11 +60,24 @@
   </div>
     <div class="2block">
       <p>Открытая книга для чтения</p>
-      <div class="openBook"></div>
+      <div class="openBook">
+        <?php
+      require "php/db.php";
+      $id = $_GET['id'];
+        $sql = "SELECT * FROM books WHERE id = '$id'";
+      $gg = mysqli_query($connect, $sql);
+      while ($id= mysqli_fetch_array($gg)) {
+        echo "<p class='main1' draggable='true'>$id[title]</p>";
+        echo "<p class='main2' draggable='true'>$id[auther]</p>";
+        echo "<p class='main3' draggable='true'>$id[content]</p>";
+      }
+    ?>
+      </div>
     </div>
     </section>
 
     <script src="upload.js"></script>
     <script src="jquery-3.6.0.min.js"></script>
+    <script src="style.js"></script>
   </body>
 </html>

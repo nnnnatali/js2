@@ -26,11 +26,6 @@ h1
 	margin-right: 10px;
 }
 
-.Tblock
-{
-	
-}
-
 .myLike, .listBook, .addBook, p
 {
 	background-color: #ada7a1;
@@ -43,4 +38,28 @@ h1
 	background-color: #e0ddd7;
 	margin-bottom: 5px;
 	border-radius: 3px;
+}
+
+.tabs > div {
+	display: none;
+	padding: 10px 15px;
+}
+
+#tab-btn-1:checked~#content-1,
+#tab-btn-2:checked~#content-2 {
+	display: block;
+}
+
+.tabs>label {
+	display: inline-block;
+	text-align: center;
+	vertical-align: middle;
+	user-select: none;
+	font-size: 16px;
+	cursor: pointer;
+	position: relative;
+}
+
+.tabs>input[type="radio"]:checked+label {
+	text-decoration: underline;
 }
